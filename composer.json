@@ -59,7 +59,7 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install --symlink --relative assets": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -74,7 +74,8 @@
     "extra": {
         "symfony": {
             "id": "01CBTQZ84X9TF4ZNM3181P7XZ1",
-            "allow-contrib": false
+            "allow-contrib": false,
+            "public-dir": "."
         }
     }
 }
