@@ -87,7 +87,12 @@
     </nav>
     <section class="hero">
         <div class="hero-body is-fullwidth">
-
+            <ul>
+            <li>Lista de rutas</li>
+            {% for route in menu %}
+                <li>{{ dump(route) }}</li>
+            {% endfor %}
+            </ul>
         </div>
     </section>
 {% endblock %}

@@ -8,13 +8,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class LoginController extends Controller
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/login", name="login", options={"menu"="admin", "submenu"="", "description"="Login"})
      */
-    public function index()
+    public function login()
     {
         return $this->render('login/login.html.twig', [
             'controller_name' => 'LoginController',
         ]);
     }
+
+    /**
+     * @Route("/logout", name="logout", options={"menu"="admin", "submenu"="", "description"="Logout"})
+     */
+    public function logout()
+    {
+        $this->redirect('login');
+    }
+
 
 }
